@@ -1,0 +1,18 @@
+#include "util.as"
+
+title_string = "タイトル画面"
+screen_w = 640
+screen_h = 480
+font_name = "ＭＳ ゴシック"
+font_size = 100
+
+screen 0, screen_w, screen_h
+
+title "ここはタイトル"
+cls 1
+
+font font_name, font_size, 1
+x = getstring_horizonmiddle(title_string, font_name, font_size, 1)
+y = getstring_verticalmiddle(title_string, font_name, font_size, 1)
+gsel 0
+pos screen_w / 2 - x, screen_h / 2  - y : mes title_string
